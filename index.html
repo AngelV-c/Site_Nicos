@@ -196,147 +196,437 @@
       <p class="menu-desc"       data-i18n="menu.desc">Ingredientes frescos, receitas tradicionais</p>
     </div>
 
-    <!-- Abas de categoria — adicione ou remova conforme o cardápio real -->
+    <div class="pizza-info-strip">
+      <div class="pis-sizes">
+        <span class="pis-item">Broto <strong>25cm</strong> · 1 sabor</span>
+        <span class="pis-sep">|</span>
+        <span class="pis-item">Média <strong>30cm</strong> · 2 sabores</span>
+        <span class="pis-sep">|</span>
+        <span class="pis-item">Grande <strong>35cm</strong> · 2 sabores</span>
+        <span class="pis-sep">|</span>
+        <span class="pis-item">Gigante <strong>40cm</strong> · 3 sabores</span>
+      </div>
+      <p class="pis-note">Todas as pizzas salgadas contêm orégano e molho de tomate &nbsp;·&nbsp; Pizzas com 2 ou 3 sabores: prevalece o de maior valor</p>
+    </div>
+
     <div class="menu-tabs">
-      <button class="menu-tab active" onclick="filterMenu('todos', event)"      data-i18n="menu.tab.all">Todos</button>
-      <button class="menu-tab"        onclick="filterMenu('entradas', event)"   data-i18n="menu.tab.starters">Entradas</button>
-      <button class="menu-tab"        onclick="filterMenu('pizzas', event)"     data-i18n="menu.tab.pizzas">Pizzas</button>
-      <button class="menu-tab"        onclick="filterMenu('massas', event)"     data-i18n="menu.tab.pasta">Massas</button>
-      <button class="menu-tab"        onclick="filterMenu('pratos', event)"     data-i18n="menu.tab.mains">Pratos Principais</button>
-      <button class="menu-tab"        onclick="filterMenu('sobremesas', event)" data-i18n="menu.tab.desserts">Sobremesas</button>
-      <button class="menu-tab"        onclick="filterMenu('bebidas', event)"    data-i18n="menu.tab.drinks">Bebidas</button>
+      <button class="menu-tab active" onclick="filterMenu('todos', event)">Todos</button>
+      <button class="menu-tab"        onclick="filterMenu('tradicionais', event)">Tradicionais</button>
+      <button class="menu-tab"        onclick="filterMenu('especiais', event)">Especiais</button>
+      <button class="menu-tab"        onclick="filterMenu('doces', event)">Doces</button>
+      <button class="menu-tab"        onclick="filterMenu('entradas', event)">Entradas</button>
+      <button class="menu-tab"        onclick="filterMenu('pratos', event)">Pratos Principais</button>
+      <button class="menu-tab"        onclick="filterMenu('sobremesas', event)">Sobremesas</button>
+      <button class="menu-tab"        onclick="filterMenu('bebidas', event)">Bebidas</button>
     </div>
-
-    <!--
-    ═══════════════════════════════════════════════════
-    COMO ADICIONAR UM PRATO REAL:
-
-    Copie o bloco abaixo, preencha os dados e adicione
-    dentro da div#menuGrid. Remova a classe img-placeholder
-    do menu-card-img e substitua pelo <img> real.
-
-    <div class="menu-card" data-category="pizzas">
-      <div class="menu-card-img">
-        <img src="imagens/pratos/pizza-margherita.jpg"
-             alt="Pizza Margherita"
-             style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="menu-card-body">
-        <div class="menu-card-name">Pizza Margherita</div>
-        <p class="menu-card-desc">
-          Molho de tomate artesanal, mussarela fresca e manjericão.
-        </p>
-        <div class="menu-card-footer">
-          <span class="menu-card-price">R$ 59,90</span>
-          <span class="menu-card-tag">Clássica</span>
-        </div>
-      </div>
-    </div>
-
-    Categorias disponíveis (data-category):
-      entradas | pizzas | massas | pratos | sobremesas | bebidas
-    ═══════════════════════════════════════════════════ -->
 
     <div class="menu-grid" id="menuGrid">
 
-      <!-- PLACEHOLDER — Entrada -->
+      <!-- ── PIZZAS TRADICIONAIS ── -->
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Calabresa</div>
+          <p class="menu-card-desc">Mussarela e calabresa</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Bacon</div>
+          <p class="menu-card-desc">Mussarela e bacon</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Quatro Queijos</div>
+          <p class="menu-card-desc">Mussarela, provolone, parmesão e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Palmito</div>
+          <p class="menu-card-desc">Mussarela e palmito</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Frango Catupiry</div>
+          <p class="menu-card-desc">Mussarela, frango temperado e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Strogonoff de Frango</div>
+          <p class="menu-card-desc">Mussarela, frango com champignon, creme de leite e batata palha</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Portuguesa</div>
+          <p class="menu-card-desc">Mussarela, presunto, ovo, cebola e azeitona</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Napolitana</div>
+          <p class="menu-card-desc">Mussarela, tomate, parmesão e cebola</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Lombo Canadense</div>
+          <p class="menu-card-desc">Mussarela, lombo fatiado e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Bacon com Brócolis</div>
+          <p class="menu-card-desc">Mussarela, bacon, brócolis e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Alho e Óleo</div>
+          <p class="menu-card-desc">Mussarela, alho e óleo e parmesão</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Nico's</div>
+          <p class="menu-card-desc">Mussarela, palmito, frango, calabresa e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Marguerita</div>
+          <p class="menu-card-desc">Mussarela, tomate, parmesão e manjericão fresco</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cinco Queijos</div>
+          <p class="menu-card-desc">Mussarela, parmesão, provolone, gorgonzola e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Milho</div>
+          <p class="menu-card-desc">Mussarela, milho e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tradicionais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Vegetariana</div>
+          <p class="menu-card-desc">Mussarela, milho, ervilha, palmito, brócolis e tomate</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 158,00</span>
+            <span class="menu-card-tag">Tradicional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PIZZAS ESPECIAIS ── -->
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Atum</div>
+          <p class="menu-card-desc">Mussarela, atum, cebola e azeitona</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Pepperoni</div>
+          <p class="menu-card-desc">Mussarela, pepperoni e azeitona preta</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Tomate Seco</div>
+          <p class="menu-card-desc">Mussarela, tomate seco, parmesão fino e rúcula</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Camarão Catupiry</div>
+          <p class="menu-card-desc">Mussarela, camarão temperado e catupiry</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Camarão</div>
+          <p class="menu-card-desc">Mussarela, camarão temperado e azeitona preta</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="especiais">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Gorgonzola</div>
+          <p class="menu-card-desc">Mussarela e gorgonzola</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 168,00</span>
+            <span class="menu-card-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PIZZAS DOCES ── -->
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chocolate Preto</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chocolate Branco</div>
+          <p class="menu-card-desc">Mussarela, chocolate branco e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Brigadeiro</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto, chocolate granulado e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Prestígio</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto, coco ralado e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Sensação</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto ou branco, morangos e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Banana com Canela</div>
+          <p class="menu-card-desc">Mussarela, banana, canela com açúcar e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Confete</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto, confete e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Charge</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto, amendoim e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="doces">
+        <div class="menu-card-body">
+          <div class="menu-card-name">Viúva Negra</div>
+          <p class="menu-card-desc">Mussarela, chocolate preto, chocolate granulado, morango e leite condensado</p>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">a partir de R$ 118,00</span>
+            <span class="menu-card-tag">Doce</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CARDÁPIO DO SALÃO (em breve) ── -->
+
       <div class="menu-card" data-category="entradas">
         <div class="menu-card-img img-placeholder">
           <span class="ph-icon">🥗</span>
-          <span class="ph-label">Foto da entrada<br>600×450px</span>
+          <span class="ph-label">Em breve</span>
         </div>
         <div class="menu-card-body">
           <div class="placeholder-name"></div>
           <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:80%"></div>
           <div class="menu-card-footer" style="margin-top:1rem">
             <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tag.starter">Entrada</span>
+            <span class="menu-card-tag" style="opacity:0.3">Entrada</span>
           </div>
         </div>
       </div>
 
-      <!-- PLACEHOLDER — Pizza 1 -->
-      <div class="menu-card" data-category="pizzas">
-        <div class="menu-card-img img-placeholder">
-          <span class="ph-icon">🍕</span>
-          <span class="ph-label">Foto da pizza<br>600×450px</span>
-        </div>
-        <div class="menu-card-body">
-          <div class="placeholder-name"></div>
-          <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:75%"></div>
-          <div class="menu-card-footer" style="margin-top:1rem">
-            <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tag.pizza">Pizza</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER — Pizza 2 -->
-      <div class="menu-card" data-category="pizzas">
-        <div class="menu-card-img img-placeholder">
-          <span class="ph-icon">🍕</span>
-          <span class="ph-label">Foto da pizza<br>600×450px</span>
-        </div>
-        <div class="menu-card-body">
-          <div class="placeholder-name"></div>
-          <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:65%"></div>
-          <div class="menu-card-footer" style="margin-top:1rem">
-            <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tag.pizza">Pizza</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER — Massa -->
-      <div class="menu-card" data-category="massas">
-        <div class="menu-card-img img-placeholder">
-          <span class="ph-icon">🍝</span>
-          <span class="ph-label">Foto da massa<br>600×450px</span>
-        </div>
-        <div class="menu-card-body">
-          <div class="placeholder-name"></div>
-          <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:70%"></div>
-          <div class="menu-card-footer" style="margin-top:1rem">
-            <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tab.pasta">Massa</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER — Prato Principal -->
       <div class="menu-card" data-category="pratos">
         <div class="menu-card-img img-placeholder">
           <span class="ph-icon">🍽️</span>
-          <span class="ph-label">Foto do prato<br>600×450px</span>
+          <span class="ph-label">Em breve</span>
         </div>
         <div class="menu-card-body">
           <div class="placeholder-name"></div>
           <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:55%"></div>
           <div class="menu-card-footer" style="margin-top:1rem">
             <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tab.mains">Principal</span>
+            <span class="menu-card-tag" style="opacity:0.3">Prato Principal</span>
           </div>
         </div>
       </div>
 
-      <!-- PLACEHOLDER — Sobremesa -->
       <div class="menu-card" data-category="sobremesas">
         <div class="menu-card-img img-placeholder">
           <span class="ph-icon">🍮</span>
-          <span class="ph-label">Foto da sobremesa<br>600×450px</span>
+          <span class="ph-label">Em breve</span>
         </div>
         <div class="menu-card-body">
           <div class="placeholder-name"></div>
           <div class="placeholder-desc-line" style="width:100%"></div>
-          <div class="placeholder-desc-line" style="width:80%"></div>
           <div class="menu-card-footer" style="margin-top:1rem">
             <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
-            <span class="menu-card-tag"   style="opacity:0.3" data-i18n="menu.tab.desserts">Sobremesa</span>
+            <span class="menu-card-tag" style="opacity:0.3">Sobremesa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="bebidas">
+        <div class="menu-card-img img-placeholder">
+          <span class="ph-icon">🥤</span>
+          <span class="ph-label">Em breve</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="placeholder-name"></div>
+          <div class="placeholder-desc-line" style="width:100%"></div>
+          <div class="menu-card-footer" style="margin-top:1rem">
+            <span class="menu-card-price" style="color:rgba(196,145,58,0.3)">R$ ——</span>
+            <span class="menu-card-tag" style="opacity:0.3">Bebida</span>
           </div>
         </div>
       </div>

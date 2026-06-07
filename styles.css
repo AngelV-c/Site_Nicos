@@ -642,6 +642,34 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
+/* Pizza info strip */
+.pizza-info-strip {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.pis-sizes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-bottom: 0.6rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+}
+
+.pis-sep { color: rgba(255,255,255,0.2); }
+
+.pis-note {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.03em;
+}
+
 /* Abas de categoria */
 .menu-tabs {
   display: flex;
