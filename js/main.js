@@ -53,17 +53,19 @@ document.addEventListener('keydown', (e) => {
  *                            ou 'todos' para mostrar todos
  * @param {Event}  event    - evento do clique (para atualizar a aba ativa)
  */
-function filterMenu(category, event) {
-  const cards = document.querySelectorAll('.menu-card');
-  const tabs  = document.querySelectorAll('.menu-tab');
+function filterMenu(category, event, gridId) {
+  const grid = document.getElementById(gridId || 'menuGrid');
+  if (!grid) return;
 
-  // Atualiza aba ativa
+  const cards = grid.querySelectorAll('.menu-card');
+  const tabContainer = event && event.currentTarget
+    ? event.currentTarget.closest('.menu-tabs')
+    : null;
+  const tabs = tabContainer ? tabContainer.querySelectorAll('.menu-tab') : [];
+
   tabs.forEach(tab => tab.classList.remove('active'));
-  if (event && event.currentTarget) {
-    event.currentTarget.classList.add('active');
-  }
+  if (event && event.currentTarget) event.currentTarget.classList.add('active');
 
-  // Mostra/oculta cards
   cards.forEach(card => {
     const show = category === 'todos' || card.dataset.category === category;
     card.style.display = show ? '' : 'none';

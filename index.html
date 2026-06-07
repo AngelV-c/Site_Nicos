@@ -213,10 +213,10 @@
       </div>
 
       <div class="menu-tabs">
-        <button class="menu-tab active" onclick="filterMenu('todos', event)">Todos</button>
-        <button class="menu-tab"        onclick="filterMenu('tradicionais', event)">Tradicionais</button>
-        <button class="menu-tab"        onclick="filterMenu('especiais', event)">Especiais</button>
-        <button class="menu-tab"        onclick="filterMenu('doces', event)">Doces</button>
+        <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGrid')">Todos</button>
+        <button class="menu-tab"        onclick="filterMenu('tradicionais', event, 'menuGrid')">Tradicionais</button>
+        <button class="menu-tab"        onclick="filterMenu('especiais', event, 'menuGrid')">Especiais</button>
+        <button class="menu-tab"        onclick="filterMenu('doces', event, 'menuGrid')">Doces</button>
       </div>
 
       <div class="menu-grid" id="menuGrid">
@@ -569,12 +569,514 @@
     </div><!-- /menu-bloco pizzas -->
 
     <!-- ══ SALÃO ══ -->
-    <div class="menu-bloco menu-bloco-salao">
+    <div class="menu-bloco">
       <div class="menu-bloco-topo">
         <h3 class="menu-bloco-titulo">Salão</h3>
-        <p class="menu-bloco-em-breve">Entradas, Pratos Principais, Sobremesas e Bebidas — em breve</p>
+        <div class="pizza-info-strip">
+          <p class="pis-note">Pratos para duas pessoas &nbsp;·&nbsp; Taxa de serviço 10% &nbsp;·&nbsp; Meio prato 70% do valor &nbsp;·&nbsp; Petiscos: não servimos meia porção</p>
+        </div>
       </div>
-    </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGridSalao')">Todos</button>
+        <button class="menu-tab"        onclick="filterMenu('especiais', event, 'menuGridSalao')">Especiais</button>
+        <button class="menu-tab"        onclick="filterMenu('petiscos', event, 'menuGridSalao')">Petiscos</button>
+        <button class="menu-tab"        onclick="filterMenu('peixes', event, 'menuGridSalao')">Peixes</button>
+        <button class="menu-tab"        onclick="filterMenu('porcoes', event, 'menuGridSalao')">Porções</button>
+      </div>
+
+      <div class="menu-grid" id="menuGridSalao">
+
+        <!-- ── ESPECIAIS ── -->
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Sequência de Camarão</div>
+            <p class="menu-card-desc">Camarão ao bafo, camarão grelhado, camarão ao alho e óleo, camarão soltinho, risoto de camarão, fritas, bolinho de camarão e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 478,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Sete Delícias</div>
+            <p class="menu-card-desc">Lula a dorê, camarão soltinho, isca de peixe, bolinho de bacalhau, bolinho de siri, bolinho de camarão, bolinho de peixe e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 416,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Delícias da Praia</div>
+            <p class="menu-card-desc">Lula a dorê, isca de peixe, camarão soltinho, isca de frango, isca de mignon e batata frita</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 580,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Lagosta Nicos</div>
+            <p class="menu-card-desc">Lagosta grelhada, camarão grelhado, côngrio grelhado, arroz branco, arroz a grega, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 523,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PETISCOS ── -->
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Camarão</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Siri</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão ao alho e óleo ou bafo (médio)</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 189,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão ao alho e óleo ou bafo (grande)</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão Soltinho</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 148,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bandeja Mista</div>
+            <p class="menu-card-desc">Polenta frita, isca de frango, contra-filé e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Peixe</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 99,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Lula à Dorê</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 118,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Batata Frita</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 49,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Batata Frita com Bacon</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 55,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Polenta Frita</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 49,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Bacalhau</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 83,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Peixe</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Marisco à Vinagrete</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 98,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Ostra Gratinada</div>
+            <p class="menu-card-desc">12 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 118,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Frango à Milanesa</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 89,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Tilapia</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 138,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bandeja Praia Mariscal</div>
+            <p class="menu-card-desc">Isca de peixe, camarão soltinho e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PEIXES ── -->
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado Tropical</div>
+            <p class="menu-card-desc">Linguado grelhado, molho com camarões, alcaparras, abacaxi e maçã ao creme de leite. Arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 237,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado à Belle Meuniére</div>
+            <p class="menu-card-desc">Linguado grelhado, molho com camarões na manteiga, champignon, alcaparras e palmito. Arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado ao Molho de Camarão</div>
+            <p class="menu-card-desc">Linguado grelhado, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 237,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Anchova na Chapa</div>
+            <p class="menu-card-desc">Anchova grelhada, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 182,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Peixe Nicos</div>
+            <p class="menu-card-desc">Linguado a dorê com recheio de molho de camarão e palmito, gratinado com molho branco e catupiry, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 303,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão ao Molho de Maracujá</div>
+            <p class="menu-card-desc">Salmão grelhado, molho com maracujá, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 238,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão ao Molho de Camarão</div>
+            <p class="menu-card-desc">Salmão grelhado, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Polvo à Provençal</div>
+            <p class="menu-card-desc">Polvo no azeite de oliva com lula, camarão e mariscos puxados no shoyu, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 358,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão com Manteiga e Alcaparras</div>
+            <p class="menu-card-desc">Salmão grelhado, alcaparras puxadas na manteiga, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio à Belle Meuniére</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho com camarão na manteiga, champignon, alcaparras e palmito, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio à Portuguesa</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho com cebola, pimentões, azeitona, batata, tomate e ovo ao azeite de oliva, arroz branco e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 303,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio Baden Baden</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho branco com bacon e temperos especiais, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Moqueca de Frutos do Mar</div>
+            <p class="menu-card-desc">Camarão, peixe, lula e marisco ao azeite de oliva com leite de coco, dendê e pimentão, arroz branco, purê de batata e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 292,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Anchova Especial</div>
+            <p class="menu-card-desc">Anchova grelhada, camarões na manteiga, champignon, alcaparras e palmito, arroz branco, legumes soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 193,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Filé de Peixe ao Molho de Camarão</div>
+            <p class="menu-card-desc">Peixe à milanesa, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 196,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Garoupa à Belle Meuniére</div>
+            <p class="menu-card-desc">Garoupa grelhada, camarões na manteiga, champignon, alcaparras e palmito, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Paella Valenciana</div>
+            <p class="menu-card-desc">Peixe, camarão, lula, marisco, pimentões e ervilha. Com arroz e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PORÇÕES ── -->
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Arroz Branco</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 28,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Arroz com Alho</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 31,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Pirão de Peixe</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 28,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Porção de Feijão</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 25,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Molho de Camarão</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 33,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /menu-grid salao -->
+    </div><!-- /menu-bloco salao -->
 
   </section>
 
