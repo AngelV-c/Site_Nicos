@@ -363,15 +363,11 @@ h1, h2, h3 {
 }
 
 .hero-bg {
-  /*
-    Quando tiver a foto:
-    background-image: url('imagens/hero.jpg');
-    background-size: cover;
-    background-position: center;
-  */
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, #3d2a1a 0%, #1c1611 60%);
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-bg-placeholder {
@@ -536,12 +532,9 @@ h1, h2, h3 {
 .sobre-visual { position: relative; }
 
 .sobre-img-main {
-  /*
-    Quando tiver a foto:
-    background-image: url('imagens/sobre.jpg');
-    background-size: cover;
-    background-position: center;
-  */
+  background-image: url('images/sobre.jpeg');
+  background-size: cover;
+  background-position: center;
   width: 100%;
   aspect-ratio: 4/5;
   border-radius: var(--radius);
@@ -549,12 +542,9 @@ h1, h2, h3 {
 }
 
 .sobre-img-accent {
-  /*
-    Quando tiver a foto de detalhe:
-    background-image: url('imagens/sobre-detalhe.jpg');
-    background-size: cover;
-    background-position: center;
-  */
+  background-image: url('images/sobre-detalhes.jpeg');
+  background-size: cover;
+  background-position: center;
   width: 45%;
   aspect-ratio: 1;
   border-radius: var(--radius);
