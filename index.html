@@ -57,6 +57,13 @@
   ══════════════════════════════════════ -->
   <section id="hero">
     <div class="hero-bg">
+      <!--
+        Quando tiver a foto, remova o bloco hero-bg-placeholder abaixo
+        e adicione no CSS (styles.css), na regra .hero-bg:
+          background-image: url('imagens/hero.jpg');
+          background-size: cover;
+          background-position: center;
+      -->
       <div class="hero-bg-placeholder">
         <div class="ph-text">Foto principal do restaurante — 1920×1080px</div>
       </div>
@@ -84,16 +91,19 @@
   <div id="info-strip">
     <div class="strip-item">
       <span class="icon">📍</span>
+      <!-- ↓ Substitua pelo endereço real ↓ -->
       <span data-i18n="strip.address">Rua [Endereço] — Bombinhas, SC</span>
     </div>
     <div class="strip-divider"></div>
     <div class="strip-item">
       <span class="icon">🕐</span>
+      <!-- ↓ Substitua pelo horário real ↓ -->
       <span data-i18n="strip.hours">Seg–Dom · 11h–23h</span>
     </div>
     <div class="strip-divider"></div>
     <div class="strip-item">
       <span class="icon">📞</span>
+      <!-- ↓ Substitua pelo telefone real ↓ -->
       <span>(47) [Telefone]</span>
     </div>
     <div class="strip-divider"></div>
@@ -110,17 +120,20 @@
   <section id="sobre">
     <div class="sobre-visual">
 
+      <!-- Imagem principal — substitua pelo <img> real quando tiver a foto -->
       <div class="sobre-img-main img-placeholder">
         <span class="ph-icon">🍽️</span>
         <span class="ph-label">Foto do ambiente<br>800×1000px</span>
       </div>
 
+      <!-- Imagem de detalhe — substitua pelo <img> real quando tiver a foto -->
       <div class="sobre-img-accent img-placeholder">
         <span class="ph-icon">🍕</span>
         <span class="ph-label">Detalhe<br>400×400px</span>
       </div>
 
       <div class="sobre-badge">
+        <!-- ↓ Substitua pelo ano de fundação real ↓ -->
         <span class="year">1984</span>
         <span class="year-label" data-i18n="sobre.since">Desde</span>
       </div>
@@ -131,6 +144,14 @@
       <p class="section-subtitle" data-i18n="sobre.eyebrow">Nossa história</p>
       <h2 class="section-title"  data-i18n="sobre.title">Tradição e sabor em Bombinhas</h2>
 
+      <!--
+        ↓ Substitua os blocos de placeholder pelos parágrafos reais ↓
+        Exemplo:
+        <p class="sobre-text">
+          O Nico's nasceu da paixão pela culinária italiana e pela beleza de Bombinhas.
+          Desde [ANO], servimos pratos feitos com ingredientes frescos e muito amor.
+        </p>
+      -->
       <div class="text-placeholder-block">
         <div class="text-placeholder" style="width:95%"></div>
         <div class="text-placeholder" style="width:88%"></div>
@@ -145,19 +166,19 @@
 
       <div class="sobre-highlights">
         <div class="highlight-item">
-          <div class="highlight-number">__+</div>
+          <div class="highlight-number">__+</div><!-- ↓ Nº de pratos ↓ -->
           <div class="highlight-label" data-i18n="sobre.h1">Pratos no cardápio</div>
         </div>
         <div class="highlight-item">
-          <div class="highlight-number">__+</div>
+          <div class="highlight-number">__+</div><!-- ↓ Anos de experiência ↓ -->
           <div class="highlight-label" data-i18n="sobre.h2">Anos de experiência</div>
         </div>
         <div class="highlight-item">
-          <div class="highlight-number">__+</div>
+          <div class="highlight-number">__+</div><!-- ↓ Sabores de pizza ↓ -->
           <div class="highlight-label" data-i18n="sobre.h3">Sabores de pizza</div>
         </div>
         <div class="highlight-item">
-          <div class="highlight-number">⭐ __</div>
+          <div class="highlight-number">⭐ __</div><!-- ↓ Nota Google ↓ -->
           <div class="highlight-label" data-i18n="sobre.h4">Avaliação no Google</div>
         </div>
       </div>
@@ -192,10 +213,10 @@
       </div>
 
       <div class="menu-tabs">
-        <button class="menu-tab active" onclick="filterMenu('todos', event)">Todos</button>
-        <button class="menu-tab"        onclick="filterMenu('tradicionais', event)">Tradicionais</button>
-        <button class="menu-tab"        onclick="filterMenu('especiais', event)">Especiais</button>
-        <button class="menu-tab"        onclick="filterMenu('doces', event)">Doces</button>
+        <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGrid')">Todos</button>
+        <button class="menu-tab"        onclick="filterMenu('tradicionais', event, 'menuGrid')">Tradicionais</button>
+        <button class="menu-tab"        onclick="filterMenu('especiais', event, 'menuGrid')">Especiais</button>
+        <button class="menu-tab"        onclick="filterMenu('doces', event, 'menuGrid')">Doces</button>
       </div>
 
       <div class="menu-grid" id="menuGrid">
@@ -548,12 +569,514 @@
     </div><!-- /menu-bloco pizzas -->
 
     <!-- ══ SALÃO ══ -->
-    <div class="menu-bloco menu-bloco-salao">
+    <div class="menu-bloco">
       <div class="menu-bloco-topo">
         <h3 class="menu-bloco-titulo">Salão</h3>
-        <p class="menu-bloco-em-breve">Entradas, Pratos Principais, Sobremesas e Bebidas — em breve</p>
+        <div class="pizza-info-strip">
+          <p class="pis-note">Pratos para duas pessoas &nbsp;·&nbsp; Taxa de serviço 10% &nbsp;·&nbsp; Meio prato 70% do valor &nbsp;·&nbsp; Petiscos: não servimos meia porção</p>
+        </div>
       </div>
-    </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGridSalao')">Todos</button>
+        <button class="menu-tab"        onclick="filterMenu('especiais', event, 'menuGridSalao')">Especiais</button>
+        <button class="menu-tab"        onclick="filterMenu('petiscos', event, 'menuGridSalao')">Petiscos</button>
+        <button class="menu-tab"        onclick="filterMenu('peixes', event, 'menuGridSalao')">Peixes</button>
+        <button class="menu-tab"        onclick="filterMenu('porcoes', event, 'menuGridSalao')">Porções</button>
+      </div>
+
+      <div class="menu-grid" id="menuGridSalao">
+
+        <!-- ── ESPECIAIS ── -->
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Sequência de Camarão</div>
+            <p class="menu-card-desc">Camarão ao bafo, camarão grelhado, camarão ao alho e óleo, camarão soltinho, risoto de camarão, fritas, bolinho de camarão e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 478,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Sete Delícias</div>
+            <p class="menu-card-desc">Lula a dorê, camarão soltinho, isca de peixe, bolinho de bacalhau, bolinho de siri, bolinho de camarão, bolinho de peixe e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 416,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Delícias da Praia</div>
+            <p class="menu-card-desc">Lula a dorê, isca de peixe, camarão soltinho, isca de frango, isca de mignon e batata frita</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 580,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="especiais">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Lagosta Nicos</div>
+            <p class="menu-card-desc">Lagosta grelhada, camarão grelhado, côngrio grelhado, arroz branco, arroz a grega, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 523,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PETISCOS ── -->
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Camarão</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Siri</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão ao alho e óleo ou bafo (médio)</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 189,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão ao alho e óleo ou bafo (grande)</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Camarão Soltinho</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 148,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bandeja Mista</div>
+            <p class="menu-card-desc">Polenta frita, isca de frango, contra-filé e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Peixe</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 99,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Lula à Dorê</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 118,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Batata Frita</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 49,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Batata Frita com Bacon</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 55,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Polenta Frita</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 49,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Bacalhau</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 83,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bolinho de Peixe</div>
+            <p class="menu-card-desc">6 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 69,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Marisco à Vinagrete</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 98,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Ostra Gratinada</div>
+            <p class="menu-card-desc">12 unidades</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 118,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Frango à Milanesa</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 89,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Isca de Tilapia</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 138,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="petiscos">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Bandeja Praia Mariscal</div>
+            <p class="menu-card-desc">Isca de peixe, camarão soltinho e fritas</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 199,00</span>
+              <span class="menu-card-tag">Petisco</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PEIXES ── -->
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado Tropical</div>
+            <p class="menu-card-desc">Linguado grelhado, molho com camarões, alcaparras, abacaxi e maçã ao creme de leite. Arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 237,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado à Belle Meuniére</div>
+            <p class="menu-card-desc">Linguado grelhado, molho com camarões na manteiga, champignon, alcaparras e palmito. Arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Linguado ao Molho de Camarão</div>
+            <p class="menu-card-desc">Linguado grelhado, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 237,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Anchova na Chapa</div>
+            <p class="menu-card-desc">Anchova grelhada, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 182,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Peixe Nicos</div>
+            <p class="menu-card-desc">Linguado a dorê com recheio de molho de camarão e palmito, gratinado com molho branco e catupiry, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 303,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão ao Molho de Maracujá</div>
+            <p class="menu-card-desc">Salmão grelhado, molho com maracujá, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 238,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão ao Molho de Camarão</div>
+            <p class="menu-card-desc">Salmão grelhado, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Polvo à Provençal</div>
+            <p class="menu-card-desc">Polvo no azeite de oliva com lula, camarão e mariscos puxados no shoyu, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 358,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Salmão com Manteiga e Alcaparras</div>
+            <p class="menu-card-desc">Salmão grelhado, alcaparras puxadas na manteiga, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio à Belle Meuniére</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho com camarão na manteiga, champignon, alcaparras e palmito, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio à Portuguesa</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho com cebola, pimentões, azeitona, batata, tomate e ovo ao azeite de oliva, arroz branco e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 303,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Côngrio Baden Baden</div>
+            <p class="menu-card-desc">Côngrio grelhado, molho branco com bacon e temperos especiais, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Moqueca de Frutos do Mar</div>
+            <p class="menu-card-desc">Camarão, peixe, lula e marisco ao azeite de oliva com leite de coco, dendê e pimentão, arroz branco, purê de batata e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 292,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Anchova Especial</div>
+            <p class="menu-card-desc">Anchova grelhada, camarões na manteiga, champignon, alcaparras e palmito, arroz branco, legumes soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 193,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Filé de Peixe ao Molho de Camarão</div>
+            <p class="menu-card-desc">Peixe à milanesa, molho de camarão, arroz branco, batata frita e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 196,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Garoupa à Belle Meuniére</div>
+            <p class="menu-card-desc">Garoupa grelhada, camarões na manteiga, champignon, alcaparras e palmito, arroz branco, batata soutê e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 308,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="peixes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Paella Valenciana</div>
+            <p class="menu-card-desc">Peixe, camarão, lula, marisco, pimentões e ervilha. Com arroz e pirão de peixe</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 262,00</span>
+              <span class="menu-card-tag">Para 2 pessoas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PORÇÕES ── -->
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Arroz Branco</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 28,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Arroz com Alho</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 31,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Pirão de Peixe</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 28,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Porção de Feijão</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 25,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="porcoes">
+          <div class="menu-card-body">
+            <div class="menu-card-name">Molho de Camarão</div>
+            <p class="menu-card-desc"></p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 33,00</span>
+              <span class="menu-card-tag">Porção</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /menu-grid salao -->
+    </div><!-- /menu-bloco salao -->
 
   </section>
 
@@ -567,6 +1090,11 @@
       <h2 class="section-title"  data-i18n="gallery.title">Galeria</h2>
     </div>
 
+    <!--
+      Como substituir:
+      <div class="galeria-item-img img-placeholder ...">
+      →  <img src="imagens/galeria-1.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;">
+    -->
     <div class="galeria-grid">
       <div class="galeria-item">
         <div class="galeria-item-img img-placeholder" style="height:100%;min-height:250px">
@@ -619,6 +1147,7 @@
         <span class="info-icon">📍</span>
         <div>
           <div class="info-label" data-i18n="location.address_label">Endereço</div>
+          <!-- ↓ Substitua pelo endereço real ↓ -->
           <div class="info-value">
             Rua [Nome da Rua], [Número]<br>
             Bombinhas — SC, CEP [00000-000]
@@ -630,6 +1159,7 @@
         <span class="info-icon">🕐</span>
         <div>
           <div class="info-label" data-i18n="location.hours_label">Horário de Funcionamento</div>
+          <!-- ↓ Substitua pelos horários reais ↓ -->
           <div class="hours-grid" style="margin-top:0.5rem">
             <div class="hours-row">
               <span class="hours-day" data-i18n="days.mon_fri">Seg – Sex</span>
@@ -655,6 +1185,7 @@
         <span class="info-icon">📞</span>
         <div>
           <div class="info-label" data-i18n="location.contact_label">Contato</div>
+          <!-- ↓ Substitua pelos dados reais ↓ -->
           <div class="info-value">
             (47) [Telefone / WhatsApp]<br>
             <a href="mailto:contato@nicosrestaurante.com.br" style="color:var(--terracotta)">
@@ -666,6 +1197,22 @@
     </div>
 
     <div class="localizacao-map">
+      <!--
+        Substitua por:
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..."
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        Como obter o link:
+          1. maps.google.com → pesquise o restaurante
+          2. Compartilhar → Incorporar um mapa → copie o iframe
+      -->
       <div class="map-frame img-placeholder">
         <span class="ph-icon">🗺️</span>
         <span class="ph-label">
@@ -717,6 +1264,7 @@
       </form>
 
       <div class="social-strip">
+        <!-- ↓ Substitua pelos links reais das redes sociais ↓ -->
         <a class="social-link" href="https://instagram.com/USUARIO" target="_blank" rel="noopener">
           <span>📸</span> Instagram
         </a>
@@ -745,6 +1293,10 @@
   </footer>
 
 
+  <!-- ══════════════════════════════════════
+       SCRIPTS — carregados no final do body
+       translations.js deve vir ANTES de main.js
+  ══════════════════════════════════════ -->
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 
