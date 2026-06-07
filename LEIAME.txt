@@ -1,0 +1,76 @@
+GUIA DE IMAGENS — Nico's Restaurante & Pizzaria
+================================================
+
+Coloque as imagens nesta pasta conforme os nomes abaixo.
+Após adicionar cada imagem, remova o placeholder correspondente no index.html
+e descomente a linha com o caminho da imagem no CSS (styles.css).
+
+
+IMAGENS GERAIS
+──────────────
+hero.jpg            → Foto principal do restaurante (fachada ou ambiente)
+                      Tamanho recomendado: 1920 × 1080 px
+                      Usado em: Seção Hero (tela cheia)
+
+sobre.jpg           → Foto do ambiente interno ou do salão
+                      Tamanho recomendado: 800 × 1000 px
+                      Usado em: Seção Sobre (imagem principal)
+
+sobre-detalhe.jpg   → Detalhe de um prato ou elemento decorativo
+                      Tamanho recomendado: 400 × 400 px
+                      Usado em: Seção Sobre (imagem de destaque)
+
+
+GALERIA
+──────────────
+Nomeie como galeria-1.jpg até galeria-5.jpg (ou quantas quiser)
+Tamanho recomendado: 800 × 800 px (quadrado)
+A primeira imagem (galeria-1.jpg) aparece em destaque (maior).
+
+
+PRATOS DO CARDÁPIO
+──────────────────
+Crie uma subpasta "pratos/" dentro de "imagens/" e salve cada foto assim:
+
+pratos/nome-do-prato.jpg
+
+Exemplos:
+  pratos/pizza-margherita.jpg
+  pratos/bruschetta.jpg
+  pratos/espaguete-carbonara.jpg
+  pratos/tiramisu.jpg
+
+Tamanho recomendado: 600 × 450 px (proporção 4:3)
+Formato: JPG ou WebP (WebP é mais leve e recomendado para web)
+
+
+COMO SUBSTITUIR UM PLACEHOLDER NO HTML
+───────────────────────────────────────
+Exemplo para o Hero:
+
+  ANTES (placeholder):
+    <div class="hero-bg-placeholder">
+      <div class="ph-text">Foto principal...</div>
+    </div>
+
+  DEPOIS (imagem real):
+    Apague o bloco hero-bg-placeholder e,
+    no CSS (styles.css), na regra .hero-bg, descomente:
+      background-image: url('../imagens/hero.jpg');
+      background-size: cover;
+      background-position: center;
+
+Exemplo para um card do cardápio:
+
+  ANTES (placeholder):
+    <div class="menu-card-img img-placeholder">
+      <span class="ph-icon">🍕</span>
+      <span class="ph-label">Foto da pizza</span>
+    </div>
+
+  DEPOIS (imagem real):
+    <div class="menu-card-img">
+      <img src="imagens/pratos/pizza-margherita.jpg"
+           alt="Pizza Margherita"
+           style="width:100%;height:100%;object-fit:cover;">
+    </div>
