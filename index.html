@@ -203,6 +203,13 @@
         </div>
       </div>
 
+      <select class="menu-select" onchange="filterMenuSelect(this, 'menuGrid')">
+        <option value="todos">Todos os sabores</option>
+        <option value="tradicionais">Tradicionais</option>
+        <option value="especiais">Especiais</option>
+        <option value="doces">Doces</option>
+      </select>
+
       <div class="menu-tabs">
         <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGrid')">Todos</button>
         <button class="menu-tab"        onclick="filterMenu('tradicionais', event, 'menuGrid')">Tradicionais</button>
@@ -536,6 +543,24 @@
           <p class="pis-note">Pratos para duas pessoas &nbsp;·&nbsp; Taxa de serviço 10% &nbsp;·&nbsp; Meio prato 70% do valor &nbsp;·&nbsp; Petiscos: não servimos meia porção</p>
         </div>
       </div>
+
+      <select class="menu-select" onchange="filterMenuSelect(this, 'menuGridSalao')">
+        <option value="todos">Todos os pratos</option>
+        <option value="especiais">Especiais</option>
+        <option value="petiscos">Petiscos</option>
+        <option value="camaroes">Camarões</option>
+        <option value="peixes">Peixes</option>
+        <option value="carnes">Carnes</option>
+        <option value="frango">Frango</option>
+        <option value="massas">Massas</option>
+        <option value="vegetariano">Vegetariano</option>
+        <option value="saladas">Saladas</option>
+        <option value="lanches">Lanches</option>
+        <option value="kids">Kids</option>
+        <option value="sobremesas">Sobremesas</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="porcoes">Porções</option>
+      </select>
 
       <div class="menu-tabs">
         <button class="menu-tab active" onclick="filterMenu('todos', event, 'menuGridSalao')">Todos</button>

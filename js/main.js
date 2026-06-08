@@ -57,18 +57,47 @@ function filterMenu(category, event, gridId) {
   const grid = document.getElementById(gridId || 'menuGrid');
   if (!grid) return;
 
-  const cards = grid.querySelectorAll('.menu-card');
+  const bloco = grid.closest('.menu-bloco');
+
+  // Update tab active state
   const tabContainer = event && event.currentTarget
     ? event.currentTarget.closest('.menu-tabs')
-    : null;
-  const tabs = tabContainer ? tabContainer.querySelectorAll('.menu-tab') : [];
+    : bloco ? bloco.querySelector('.menu-tabs') : null;
+  if (tabContainer) {
+    tabContainer.querySelectorAll('.menu-tab').forEach(tab => tab.classList.remove('active'));
+    if (event && event.currentTarget) event.currentTarget.classList.add('active');
+  }
 
-  tabs.forEach(tab => tab.classList.remove('active'));
-  if (event && event.currentTarget) event.currentTarget.classList.add('active');
+  // Sync select
+  if (bloco) {
+    const sel = bloco.querySelector('.menu-select');
+    if (sel) sel.value = category;
+  }
 
-  cards.forEach(card => {
-    const show = category === 'todos' || card.dataset.category === category;
-    card.style.display = show ? '' : 'none';
+  // Filter cards
+  grid.querySelectorAll('.menu-card').forEach(card => {
+    card.style.display = (category === 'todos' || card.dataset.category === category) ? '' : 'none';
+  });
+}
+
+function filterMenuSelect(sel, gridId) {
+  const category = sel.value;
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+
+  const bloco = grid.closest('.menu-bloco');
+
+  // Update tab active state
+  if (bloco) {
+    bloco.querySelectorAll('.menu-tab').forEach(tab => {
+      const match = tab.getAttribute('onclick').match(/'([^']+)'/);
+      tab.classList.toggle('active', match && match[1] === category);
+    });
+  }
+
+  // Filter cards
+  grid.querySelectorAll('.menu-card').forEach(card => {
+    card.style.display = (category === 'todos' || card.dataset.category === category) ? '' : 'none';
   });
 }
 
