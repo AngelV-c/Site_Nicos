@@ -669,23 +669,46 @@ h1, h2, h3 {
 /* Pizza info strip */
 .pizza-info-strip {
   flex: 1;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 1.5rem;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
   text-align: center;
 }
 
-.pis-sizes {
+.pizza-preco-tabela {
   display: flex;
   justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.75rem;
   flex-wrap: wrap;
-  gap: 0.3rem 1rem;
-  margin-bottom: 0.5rem;
-  color: rgba(255,255,255,0.75);
-  font-size: 0.8rem;
 }
 
-.pis-sep { color: rgba(255,255,255,0.2); }
+.pizza-preco-col {
+  min-width: 130px;
+}
+
+.pizza-preco-cat {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.pizza-preco-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.8);
+  padding: 0.15rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.preco-tam { color: rgba(255,255,255,0.55); }
+.preco-val { font-weight: 500; color: rgba(255,255,255,0.9); }
 
 .pis-note {
   font-size: 0.68rem;
