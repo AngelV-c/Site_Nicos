@@ -581,6 +581,9 @@ h1, h2, h3 {
   margin-top: 2rem;
 }
 
+.highlight-google { grid-column: 1 / -1; border-top: 1px solid var(--border); }
+.highlight-stars  { font-size: 1.6rem; }
+
 .highlight-item {
   border-top: 1px solid var(--border);
   padding-top: 1rem;
