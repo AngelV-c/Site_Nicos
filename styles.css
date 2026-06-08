@@ -717,73 +717,38 @@ h1, h2, h3 {
 }
 
 /* Abas de categoria */
-.menu-tabs-wrap {
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.menu-tabs-wrap::before,
-.menu-tabs-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 3rem;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.menu-tabs-wrap::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg), transparent);
-}
-
-.menu-tabs-wrap::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg), transparent);
-}
+.menu-tabs-wrap { margin-bottom: 3rem; }
 
 .menu-tabs {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.4rem;
-  overflow-x: auto;
-  padding: 0.25rem 3rem 0.75rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  gap: 0.5rem;
 }
 
-.menu-tabs::-webkit-scrollbar { display: none; }
-
 .menu-tab {
-  flex-shrink: 0;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.45);
-  padding: 0.45rem 1.1rem;
-  border-radius: 50px;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: rgba(255,255,255,0.5);
+  padding: 0.55rem 1.3rem;
+  border-radius: 4px;
   font-family: 'Jost', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+  transition: background 0.18s ease, color 0.18s ease;
 }
 
 .menu-tab:hover {
-  border-color: rgba(255,255,255,0.28);
-  color: rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.85);
 }
 
 .menu-tab.active {
   background: var(--terracotta);
-  border-color: var(--terracotta);
   color: #fff;
-  box-shadow: 0 2px 14px rgba(193,68,14,0.4);
 }
 
 /* Grid de pratos */
