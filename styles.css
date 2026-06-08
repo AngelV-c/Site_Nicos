@@ -370,24 +370,6 @@ h1, h2, h3 {
   background-position: center;
 }
 
-.hero-bg-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-bg-placeholder .ph-text {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.25);
-  text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 0.8rem 1.5rem;
-  border-radius: 2px;
-}
 
 .hero-overlay {
   position: absolute;
