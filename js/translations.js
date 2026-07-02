@@ -30,7 +30,7 @@ const translations = {
     'hero.scroll':  'scroll',
 
     /* Info strip */
-    'strip.address': 'Av. Água Marinha, 1204 — Mariscal, Bombinhas/SC',
+    'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
     'strip.hours':   'Sex · Sáb · Dom · 10h–22h  |  Seg · Ter · Qui · 10h–17h',
     'strip.payment': 'Cartão · Pix · Dinheiro',
 
@@ -204,7 +204,7 @@ const translations = {
     /* Contato */
     'contact.eyebrow': 'Fale conosco',
     'contact.title':   'Entre em contato',
-    'contact.desc':    'Reservas, eventos ou dúvidas — estamos aqui para ajudar.',
+    'contact.desc':    'Reservas, eventos ou dúvidas? Estamos aqui para ajudar.',
     'contact.name':    'Nome',
     'contact.email':   'E-mail',
     'contact.phone':   'Telefone / WhatsApp',
@@ -230,7 +230,7 @@ const translations = {
     'hero.scroll':  'scroll',
 
     /* Info strip */
-    'strip.address': 'Av. Água Marinha, 1204 — Mariscal, Bombinhas/SC',
+    'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
     'strip.hours':   'Fri · Sat · Sun · 10am–10pm  |  Mon · Tue · Thu · 10am–5pm',
     'strip.payment': 'Card · Pix · Cash',
 
@@ -404,7 +404,7 @@ const translations = {
     /* Contact */
     'contact.eyebrow': 'Get in touch',
     'contact.title':   'Contact us',
-    'contact.desc':    'Reservations, events or questions — we\'re here to help.',
+    'contact.desc':    'Reservations, events or questions? We\'re here to help.',
     'contact.name':    'Name',
     'contact.email':   'E-mail',
     'contact.phone':   'Phone / WhatsApp',
@@ -430,7 +430,7 @@ const translations = {
     'hero.scroll':  'scroll',
 
     /* Info strip */
-    'strip.address': 'Av. Água Marinha, 1204 — Mariscal, Bombinhas/SC',
+    'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
     'strip.hours':   'Vie · Sáb · Dom · 10h–22h  |  Lun · Mar · Jue · 10h–17h',
     'strip.payment': 'Tarjeta · Pix · Efectivo',
 
@@ -604,7 +604,7 @@ const translations = {
     /* Contacto */
     'contact.eyebrow': 'Háblanos',
     'contact.title':   'Contáctanos',
-    'contact.desc':    'Reservas, eventos o consultas — estamos aquí para ayudarte.',
+    'contact.desc':    'Reservas, eventos o consultas? Estamos aquí para ayudarte.',
     'contact.name':    'Nombre',
     'contact.email':   'Correo',
     'contact.phone':   'Teléfono / WhatsApp',
