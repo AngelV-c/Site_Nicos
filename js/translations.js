@@ -31,7 +31,7 @@ const translations = {
 
     /* Info strip */
     'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
-    'strip.hours':   'Sex · Sáb · Dom · 10h–22h  |  Seg · Ter · Qui · 10h–17h',
+    'strip.hours':   'Sex · Sáb · Dom · 10h às 22h  |  Seg · Ter · Qui · 10h às 17h',
     'strip.payment': 'Cartão · Pix · Dinheiro',
 
     /* Sobre */
@@ -231,7 +231,7 @@ const translations = {
 
     /* Info strip */
     'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
-    'strip.hours':   'Fri · Sat · Sun · 10am–10pm  |  Mon · Tue · Thu · 10am–5pm',
+    'strip.hours':   'Fri · Sat · Sun · 10am to 10pm  |  Mon · Tue · Thu · 10am to 5pm',
     'strip.payment': 'Card · Pix · Cash',
 
     /* About */
@@ -431,7 +431,7 @@ const translations = {
 
     /* Info strip */
     'strip.address': 'Av. Água Marinha, 1204, Mariscal, Bombinhas/SC',
-    'strip.hours':   'Vie · Sáb · Dom · 10h–22h  |  Lun · Mar · Jue · 10h–17h',
+    'strip.hours':   'Vie · Sáb · Dom · 10h a 22h  |  Lun · Mar · Jue · 10h a 17h',
     'strip.payment': 'Tarjeta · Pix · Efectivo',
 
     /* Sobre */
